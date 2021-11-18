@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/dist/client/link'
 import DesktopTicket from './DekstopTicket'
 import { Sig } from './interfaces'
 import { sigs } from './utils/sigs'
@@ -38,11 +37,11 @@ const DesktopSIG = () => {
 					untuk kamu dan teman-temanmu!
 				</p>
 				<div className='container w-full h-10 justify-center flex items-center mt-5'>
-					<Link href='/'>
+					<a href="/">
 						<button className='bg-gradient-to-r from-red-600 to-red-900 text-white font-bold py-2 px-4 rounded-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
-							Request SIG
+						Request SIG
 						</button>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>

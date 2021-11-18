@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/dist/client/link'
 import DesktopTicketBackground from '../../../public/assets/Dekstop Ticket.svg'
 import Image from 'next/image'
 import { Sig } from './interfaces'
@@ -19,11 +18,11 @@ const DesktopTicket = ({ title, link, desc }: Sig) => {
 					</p>
 				</div>
 				<div className='container w-full h-1/4 flex justify-center items-center'>
-					<Link href={link}>
+					<a href={link}>
 						<button className='bg-gradient-to-r from-red-600 to-red-900 text-white font-bold py-1 px-8 md:px-10 lg:px-12 rounded-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 mb-4'>
 							<p className='text-xs md:text-base lg:text-xl'>Join SIG</p>
 						</button>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>

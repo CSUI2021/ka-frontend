@@ -71,11 +71,11 @@ const MobileTicket = ({ title, link, desc }: Sig) => {
 											</div>
 											<div className='container h-1/6 w-full text-center justify-center flex'>
 												<div className='container h-7 w-32 mt-3'>
-													<Link href={link}>
+													<a href={link}>
 														<button className='bg-red-700 text-white font-bold py-2 px-4 rounded-full active:bg-red-900'>
 															<p>Join SIG</p>
 														</button>
-													</Link>
+													</a>
 												</div>
 											</div>
 										</div>
