@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/dist/client/link'
 import MobileTicketBackground from '../../../public/assets/Mobile Ticket.svg'
 import Image from 'next/image'
 import ModalTicket from '../../../public/assets/Mobile Modal.svg'
