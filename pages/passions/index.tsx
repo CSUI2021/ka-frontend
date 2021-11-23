@@ -6,7 +6,7 @@ import GradientBackgroundBlue from '../../app/components/sig/styles/Gradientback
 
 const PassionsPage = () => {
 	return (
-		<div className='w-full h-full'>
+		<div className='w-full h-full overflow-hidden'>
 			<GradientBackgroundBlue />
 			<GradientBackgroundRed />
 			<div className='w-screen h-auto flex items-center justify-center mt-24'>
