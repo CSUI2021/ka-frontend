@@ -20,7 +20,7 @@ const Messages = () => {
 						height={80}
 					/>
 				</div>
-				<div className='absolute'>
+				<div className='absolute' data-aos='fade-right'>
 					<h2 className='max-w-md pt-3 my-24 text-left pl-14'>Messages</h2>
 				</div>
 			</div>

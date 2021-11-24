@@ -17,7 +17,8 @@ const MessagesItem = ({
 				${index === 0 ? 'row-start-2 col-end-6 row-span-4' : ''} 
 				${index === 1 ? 'row-span-2 lg:col-span-4' : ''}
 				${index === 2 ? 'row-start-3 row-span-4' : ''}
-			`}>
+			`}
+			data-aos='flip-right'>
 			<div className='flex items-center gap-6'>
 				<div>
 					<MessagesImage src={image} alt={name} />

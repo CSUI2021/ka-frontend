@@ -41,7 +41,11 @@ const OurStories = () => {
 
 	return (
 		<section className='h-full mx-auto text-white max-w-9/10'>
-			<h2 className='my-24 text-center 3md:mb-5 2md:text-left'>Our Stories</h2>
+			<h2
+				className='my-24 text-center 3md:mb-5 2md:text-left'
+				data-aos='fade-right'>
+				Our Stories
+			</h2>
 			<SkeletonTheme
 				baseColor='#252525'
 				highlightColor='#505050'
@@ -49,7 +53,7 @@ const OurStories = () => {
 				duration={4}>
 				<div className='grid-cols-8 2md:grid'>
 					{isLoading ? (
-						<div className='col-start-2 my-auto'>
+						<div className='col-start-2 my-auto' data-aos='fade-right'>
 							<h4>
 								<Skeleton />
 							</h4>
@@ -58,7 +62,7 @@ const OurStories = () => {
 							</p>
 						</div>
 					) : (
-						<div className='col-span-3 m-auto 3md:mb-10'>
+						<div className='col-span-3 m-auto 3md:mb-10' data-aos='fade-right'>
 							<div className='flex flex-col items-center h-full mx-auto 2md:max-w-xs 3sm:max-w-xs 3md:mb-10'>
 								<h4 className='text-center'>{titles}</h4>
 								<p className='mt-4 text-justify'>{details}</p>
@@ -80,19 +84,16 @@ const OurStories = () => {
 								/>
 							</div>
 						) : (
-							stories.map(
-								(content: Content) =>
-									(
-										<StoryItem
-											{...content}
-											key={content.id}
-											setDetails={setDetails}
-											setTitles={setTitles}
-											setIsClickedGlobal={setIsClickedGlobal}
-											isClickedGlobal={isClickedGlobal}
-										/>
-									) || <Skeleton duration={10} />
-							)
+							stories.map((content: Content) => (
+								<StoryItem
+									{...content}
+									key={content.id}
+									setDetails={setDetails}
+									setTitles={setTitles}
+									setIsClickedGlobal={setIsClickedGlobal}
+									isClickedGlobal={isClickedGlobal}
+								/>
+							))
 						)}
 					</StoryContainer>
 				</div>
