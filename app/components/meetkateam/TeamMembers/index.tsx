@@ -1,19 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 import TeamCard from '../TeamCard'
+import SkeletonCardContent from '../TeamCard/SkeletonCardContent'
 import TeamInterface from './interfaces/Team.interface'
 import { team } from './utils/team'
 
 const TeamMembers = () => {
+	const [isLoading, setIsLoading] = useState(false)
+	const skeletonLoader = () => {
+		setIsLoading(true) // sementaraa biar variable used aja sebelum fetch dari BE
+		const skeletonCards: JSX.Element[] = []
+		for (let i: number = 0; i < 8; i++) {
+			skeletonCards.push(
+				<div className='w-36 mx-1 2sm:mx-4 my-5 bg-transparent 2sm:w-40 2md:w-56 lg:mx-8'>
+					<SkeletonCardContent />
+				</div>
+			)
+		}
+		return skeletonCards
+	}
 	return (
 		<div className='flex flex-wrap justify-center max-w-6xl'>
-			{team.map((member: TeamInterface) => (
-				<div
-					key={uuid()}
-					className='w-36 mx-1 2sm:mx-4 my-5 bg-transparent 2sm:w-40 2md:w-56 lg:mx-8'>
-					<TeamCard {...member} />
-				</div>
-			))}
+			{isLoading
+				? skeletonLoader()
+				: team.map((member: TeamInterface) => (
+						<div
+							key={uuid()}
+							className='w-36 mx-1 2sm:mx-4 my-5 bg-transparent 2sm:w-40 2md:w-56 lg:mx-8'>
+							<TeamCard {...member} />
+						</div>
+				  ))}
 		</div>
 	)
 }
