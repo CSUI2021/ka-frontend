@@ -21,7 +21,7 @@ const MessagesMobileItem = ({
 		}
 	}
 	return (
-		<MobileMessagesCard>
+		<MobileMessagesCard data-aos='flip-right'>
 			<div className='flex flex-col items-center space-y-2'>
 				<MessagesImage src={image} alt={name} />
 				<div className='text-center'>

@@ -8,7 +8,7 @@ const GetToKnowUsCard = ({
 	iconUrl,
 }: GetToKnowUsCardInterface) => {
 	return (
-		<Card className='w-72'>
+		<Card className='w-72' data-aos='flip-left'>
 			<Image src={iconUrl} alt='Yearbook' />
 			<h3 className='text-2xl mb-7'>{title}</h3>
 			<p className='text-md'>{description}</p>

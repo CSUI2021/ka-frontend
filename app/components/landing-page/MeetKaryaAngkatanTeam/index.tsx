@@ -17,9 +17,12 @@ const MeetTheDevTeam = () => {
 							alt='Meet Karya Angkatan Team'
 							width={150}
 							height={105}
+							data-aos='zoom-in'
 						/>
 					</div>
-					<h2 className='3md:text-3xl 3sm:text-lg 3sm:max-w-3/4 text-center'>
+					<h2
+						className='3md:text-3xl 3sm:text-lg 3sm:max-w-3/4 text-center'
+						data-aos='zoom-in'>
 						{isMobile ? 'Meet KA Team' : 'Meet Karya Angkatan Team'}
 					</h2>
 				</DevCard>
