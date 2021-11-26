@@ -16,7 +16,7 @@ const GetToKnowUs = () => {
 				Know Us
 			</h2>
 			<GetToKnowUsContainer
-				className='flex gap-5 overflow-x-auto p-7'
+				className='flex w-full gap-5 overflow-x-auto p-7'
 				ref={scrollRef}>
 				{getToKnowUsItems.map(({ url, ...props }) => {
 					return url.includes('http') ? (
