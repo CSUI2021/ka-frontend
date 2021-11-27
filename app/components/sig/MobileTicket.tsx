@@ -1,7 +1,7 @@
 import React from 'react'
-import MobileTicketBackground from '../../../public/assets/Mobile Ticket.svg'
+import MobileTicketBackground from '../../../public/assets/ticket.png'
 import Image from 'next/image'
-import ModalTicket from '../../../public/assets/Mobile Modal.svg'
+import ModalTicket from '../../../public/assets/Mobile Modal.png'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { Sig } from './interfaces'
@@ -19,12 +19,17 @@ const MobileTicket = ({ title, link, desc }: Sig) => {
 	return (
 		<div>
 			<button onClick={openModal} className=''>
-				<Image src={MobileTicketBackground} />
+				<div className='container h-full w-full  relative'>
+					<Image src={MobileTicketBackground} />
+					<div className='container w-full h-full absolute top-0 flex items-center justify-center text-white'>
+						{title}
+					</div>
+				</div>
 			</button>
 			<Transition appear show={isOpen} as={Fragment}>
 				<Dialog
 					as='div'
-					className='fixed inset-0 z-10 overflow-y-auto'
+					className='fixed inset-0 z-20 overflow-y-auto bg-gray-300 bg-opacity-10'
 					onClose={closeModal}>
 					<div className='min-h-screen px-4 text-center'>
 						<Transition.Child
@@ -62,7 +67,7 @@ const MobileTicket = ({ title, link, desc }: Sig) => {
 												<h1 className='text-white text-lg'>Programing</h1>
 											</div>
 											<div className='container h-4/6 w-full flex items-center justify-center'>
-												<div className='container h-full w-40 overflow-hidden'>
+												<div className='container h-full w-48 overflow-hidden'>
 													<p className='text-xxxs text-justify text-white'>
 														{desc}
 													</p>

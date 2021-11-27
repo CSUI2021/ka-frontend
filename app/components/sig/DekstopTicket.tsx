@@ -1,12 +1,12 @@
 import React from 'react'
-import DesktopTicketBackground from '../../../public/assets/Dekstop Ticket.svg'
+import DesktopTicketBackground from '../../../public/assets/Dekstop Ticket.png'
 import Image from 'next/image'
 import { Sig } from './interfaces'
 
 const DesktopTicket = ({ title, link, desc }: Sig) => {
 	return (
 		<div className='container h-full w-full  relative'>
-			<Image src={DesktopTicketBackground} className='' />
+			<Image src={DesktopTicketBackground} />
 			<div className='container w-full h-full absolute top-0'>
 				<div className='container w-full h-1/4  text-center flex flex-col justify-center items-center content-center'>
 					<p className='text-gray-400'>IT Interest</p>

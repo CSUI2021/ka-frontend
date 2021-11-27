@@ -15,7 +15,7 @@ const MobileSIG = () => {
 					Special Interest Group di bawah ini!
 				</p>
 			</div>
-			<div className='h-auto w-full flex items-center justify-center'>
+			<div className='h-auto w-full flex items-center justify-center px-5'>
 				<div className='grid grid-cols-2 gap-4'>
 					{sigs.map((sig: Sig) => (
 						<MobileTicket

@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
+import GradientBackgroundRed from '../../app/components/sig/styles/GradientBackgroundRed'
+import GradientBackgroundBlue from '../../app/components/sig/styles/GradientbackgroundBlue'
 
 const SendThoughts = () => {
 	return (
 		<div className='h-screen w-screen overflow-x-hidden'>
+			<GradientBackgroundBlue />
+			<GradientBackgroundRed />
 			<div className='w-full h-1/6 navbar'></div>
 			<div className='h-5/6 w-full '>
 				<div className='h-1/6 w-full flex justify-center items-center'>
@@ -23,14 +27,22 @@ const SendThoughts = () => {
 							</div>
 							<div className='w-full h-1/2 flex justify-center items-center mt-3 lg:mt-0'>
 								<Link href='/thoughts'>
-									<button className='pb-1'>
+									<button className='hover:bg-black rounded-full transition duration-500 ease-in-out transform hover:translate-y-1 lg:hover:-translate-y-1 hover:scale-110 p-2'>
 										<p className='text-white text-lg'>Our Thoughts</p>
 									</button>
 								</Link>
 							</div>
 						</div>
 					</div>
-					<div className='w-full h-5/6 border border-red-600'></div>
+					<div className='w-full h-5/6'>
+						<div className='h-full w-full flex justify-center items-center'>
+							<button className='bg-gradient-to-r from-red-600 to-red-900 py-5 px-10 rounded-lg'>
+								<p className='text-center text-white text-xl'>
+									Submit Your Message
+								</p>
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
