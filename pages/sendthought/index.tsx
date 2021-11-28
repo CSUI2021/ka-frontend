@@ -5,7 +5,7 @@ import GradientBackgroundBlue from '../../app/components/sig/styles/Gradientback
 
 const SendThoughts = () => {
 	return (
-		<div className='h-screen w-screen overflow-x-hidden'>
+		<div className='h-screen w-full overflow-x-hidden'>
 			<GradientBackgroundBlue />
 			<GradientBackgroundRed />
 			<div className='w-full h-1/6 navbar'></div>
