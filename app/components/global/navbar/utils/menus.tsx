@@ -1,8 +1,8 @@
 const menus: any = {
 	Home: '/',
 	Characters: '/characters',
-	Thoughts: '/working',
-	Passions: '/working',
+	Thoughts: '/thoughts',
+	Passions: '/passions',
 }
 
 export default menus

@@ -6,14 +6,17 @@ import Ticket from '../../app/components/thoughts/Ticket'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { thoughts } from '../../app/components/thoughts/utils/thoughts'
+import { Thought } from '../../app/components/thoughts/interfaces'
 
 const settings = {
 	infinite: true,
-	arrows: true,
-	speed: 500,
+	arrows: false,
+	speed: 1000,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	autoplay: true,
+	autoplaySpeed: 6000,
 }
 
 const Thoughts = () => {
@@ -49,17 +52,19 @@ const Thoughts = () => {
 					</div>
 					<div className='h-1/6'></div>
 					<div className='w-full h-4/6 flex items-center justify-center object-bottom'>
-						<div className='h-full w-4/6 lg:w-2/4'>
+						<div className='h-auto w-4/6 lg:w-2/4'>
 							<Slider
 								{...settings}
 								className='flex justify-center items-center'>
-								<div>
-									<Ticket />
-								</div>
-								<div>
-									<Ticket />
-								</div>
+								{thoughts.map((thoughts: Thought) => (
+									<div key={thoughts.id}>
+										<Ticket key={thoughts.id} desc={thoughts.desc} />
+									</div>
+								))}
 							</Slider>
+							<div className='flex items-center justify-center'>
+								<p className='text-gray-500'>Slide to see more</p>
+							</div>
 						</div>
 					</div>
 				</div>

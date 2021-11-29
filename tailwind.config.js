@@ -79,6 +79,7 @@ module.exports = {
 			opacity: ['hover', 'active'],
 			dropShadow: ['hover', 'active'],
 			backgroundImage: ['group-hover', 'hover', 'active'],
+			backgroundColor: ['active'],
 		},
 	},
 	plugins: [],
