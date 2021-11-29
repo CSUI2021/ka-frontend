@@ -9,14 +9,16 @@ import GetToKnowUsContainer from './GetToKnowUsContainer'
 const GetToKnowUs = () => {
 	const scrollRef = useHorizontalScroll()
 	return (
-		<section className='h-full mx-auto text-white max-w-9/10'>
-			<h2 className='my-24 text-center 2md:text-left' data-aos='fade-right'>
+		<section className='h-full text-white'>
+			<h2
+				className='my-24 text-center 2md:text-left w-full max-w-9/10 mx-auto'
+				data-aos='fade-right'>
 				Get to
 				<br />
 				Know Us
 			</h2>
 			<GetToKnowUsContainer
-				className='flex w-full gap-5 overflow-x-auto p-7'
+				className='flex w-full gap-5 overflow-x-auto xl:justify-center'
 				ref={scrollRef}>
 				{getToKnowUsItems.map(({ url, ...props }) => {
 					return url.includes('http') ? (
