@@ -1,15 +1,24 @@
 import Link from 'next/link'
 import React from 'react'
-import Image from 'next/image'
 import GradientBackgroundRed from '../../app/components/sig/styles/GradientBackgroundRed'
 import GradientBackgroundBlue from '../../app/components/sig/styles/GradientbackgroundBlue'
-import nextButton from '../../public/assets/next.png'
-import previousButton from '../../public/assets/previous.png'
 import Ticket from '../../app/components/thoughts/Ticket'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
+const settings = {
+	infinite: true,
+	arrows: true,
+	speed: 500,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+}
 
 const Thoughts = () => {
 	return (
-		<div className='h-screen w-auto overflow-x-hidden'>
+		<div className='h-screen w-auto overflow-hidden'>
 			<GradientBackgroundBlue />
 			<GradientBackgroundRed />
 			<div className='w-full h-1/6 navbar'></div>
@@ -40,28 +49,17 @@ const Thoughts = () => {
 					</div>
 					<div className='h-1/6'></div>
 					<div className='w-full h-4/6 flex items-center justify-center object-bottom'>
-						<div className='h-full w-1/6 lg:w-1/4 flex justify-center items-center'>
-							<div className='h-auto w-auto hover:bg-white rounded-full'>
-								<button>
-									<div>
-										<Image src={nextButton} height={50} width={50} />
-									</div>
-								</button>
-							</div>
-						</div>
-						<div className='h-full w-4/6 lg:w-2/4 flex items-center justify-center '>
-							<div className=''>
-								<Ticket />
-							</div>
-						</div>
-						<div className='h-full w-1/6 lg:w-1/4 flex justify-center items-center'>
-							<div className='h-auto w-auto hover:bg-white rounded-full'>
-								<button>
-									<div>
-										<Image src={previousButton} height={50} width={50} />
-									</div>
-								</button>
-							</div>
+						<div className='h-full w-4/6 lg:w-2/4'>
+							<Slider
+								{...settings}
+								className='flex justify-center items-center'>
+								<div>
+									<Ticket />
+								</div>
+								<div>
+									<Ticket />
+								</div>
+							</Slider>
 						</div>
 					</div>
 				</div>
