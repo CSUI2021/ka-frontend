@@ -27,7 +27,9 @@ const Thoughts = () => {
 			<div className='w-full h-1/6 navbar'></div>
 			<div className='h-5/6 w-full '>
 				<div className='h-1/6 w-full flex justify-center items-center'>
-					<p className='text-3xl text-white lg:text-4xl'>Apa Kata CSUI 2021?</p>
+					<p className='text-3xl text-white lg:text-4xl font-sora font-semibold'>
+						Apa Kata CSUI 2021?
+					</p>
 				</div>
 				<div className='h-5/6 w-full lg:pt-5'>
 					<div className='w-full h-1/6 lg:h-auto flex justify-center items-center'>
@@ -35,7 +37,7 @@ const Thoughts = () => {
 							<div className='w-full h-1/2 flex justify-center items-center mt-1 lg:mt-0'>
 								<Link href='/sendthought'>
 									<button className=' hover:bg-black  rounded-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 p-2'>
-										<p className='text-white text-lg hover:text-blue-300'>
+										<p className='text-white text-lg hover:text-blue-300 font-sora'>
 											Share Your Thoughts
 										</p>
 									</button>
@@ -44,7 +46,9 @@ const Thoughts = () => {
 							<div className='w-full h-1/2 flex justify-center items-center mt-3 lg:mt-0'>
 								<Link href='/thoughts'>
 									<button className='border-blue-300 border-b-2 pb-1'>
-										<p className='text-blue-300  text-lg '>Our Thoughts</p>
+										<p className='text-blue-300  text-lg font-sora'>
+											Our Thoughts
+										</p>
 									</button>
 								</Link>
 							</div>
@@ -52,7 +56,7 @@ const Thoughts = () => {
 					</div>
 					<div className='h-1/6'></div>
 					<div className='w-full h-4/6 flex items-center justify-center object-bottom'>
-						<div className='h-auto w-4/6 lg:w-2/4'>
+						<div className='h-auto w-4/6 lg:w-full'>
 							<Slider
 								{...settings}
 								className='flex justify-center items-center'>

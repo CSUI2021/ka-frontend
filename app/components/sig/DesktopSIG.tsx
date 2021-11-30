@@ -10,7 +10,7 @@ const DesktopSIG = () => {
 				<p className='text-2xl lg:text-3xl text-gray-200 leading-relaxed font-semibold'>
 					Our Interests
 				</p>
-				<p className='text-sm lg:text-base text-gray-200 leading-relaxed'>
+				<p className='text-sm lg:text-base text-gray-200 leading-relaxed font-montserrat'>
 					Mau aktif ikut lomba-lomba IT, tapi masih bingung cari partnernya?
 					Atau mau belajar tentang IT, tapi bingung mau belajar bareng siapa?
 					Yuk, join aja SIGs di bawah ini!

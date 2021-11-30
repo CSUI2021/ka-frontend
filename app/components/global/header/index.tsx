@@ -10,6 +10,12 @@ const Header = () => {
 			<link
 				href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@600&family=Sora:wght@400;600;700&display=swap'
 				rel='stylesheet'></link>
+			<link
+				href='https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap'
+				rel='stylesheet'></link>
+			<link
+				href='https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap'
+				rel='stylesheet'></link>
 		</Head>
 	)
 }

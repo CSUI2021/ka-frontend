@@ -19,7 +19,11 @@ module.exports = {
 			'2xl': '1536px',
 		},
 		extend: {
-			fontFamily: { sans: ['Poppins'] },
+			fontFamily: {
+				sans: ['Poppins'],
+				sora: ['Sora'],
+				montserrat: ['Montserrat'],
+			},
 			fontSize: {
 				'2xs': '.5rem',
 				'1.5xs': '.65rem',
